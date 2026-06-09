@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0050)file:///D:/Descargas/cuestionario-nutricion_5.html -->
+<!-- saved from url=(0050)file:///D:/Descargas/cuestionario-nutricion_6.html -->
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -535,12 +535,12 @@
 <div class="progress-wrap">
   <div class="progress-info">
     <span class="progress-label" id="sec-label">Sección 1 de 10</span>
-    <span class="progress-count" id="q-count">0 preguntas respondidas</span>
+    <span class="progress-count" id="q-count">0 de 33 respondidas</span>
   </div>
-  <div class="progress-bar"><div class="progress-fill" id="prog-fill"></div></div>
+  <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width: 0%;"></div></div>
 </div>
 
-<div class="section-nav" id="section-nav"></div>
+<div class="section-nav" id="section-nav"><div class="nav-pill active" id="nav-0">👤 Personal</div><div class="nav-pill" id="nav-1">🍽️ Alimentación</div><div class="nav-pill" id="nav-2">📊 Frecuencia</div><div class="nav-pill" id="nav-3">🏋️ Ejercicio</div><div class="nav-pill" id="nav-4">🏥 Salud</div><div class="nav-pill" id="nav-5">💧 Estilo vida</div><div class="nav-pill" id="nav-6">🔬 Condiciones</div><div class="nav-pill" id="nav-7">⏱️ Preferencias</div><div class="nav-pill" id="nav-8">📋 Historial</div><div class="nav-pill" id="nav-9">📝 Notas</div></div>
 
 <div class="content">
 
@@ -822,7 +822,7 @@
 
         <div class="q-label" style="margin-bottom:8px">Duración por sesión</div>
         <div class="range-wrap" style="margin-bottom:12px">
-          <input type="range" id="ex-duration" min="15" max="180" step="15" value="60" oninput="document.getElementById(&#39;ex-dur-val&#39;).textContent=this.value+&#39;min&#39;; updateRange(this)">
+          <input type="range" id="ex-duration" min="15" max="180" step="15" value="60" oninput="document.getElementById(&#39;ex-dur-val&#39;).textContent=this.value+&#39;min&#39;; updateRange(this)" style="--val: 27.27272727272727%;">
           <div class="range-val" id="ex-dur-val">60min</div>
         </div>
 
@@ -900,7 +900,7 @@
   <div class="card" id="card-water">
     <div class="q-label"><span class="num">21</span>Litros de agua al día</div>
     <div class="range-wrap">
-      <input type="range" id="water-liters" min="0.5" max="4" step="0.25" value="1.5" oninput="document.getElementById(&#39;water-val&#39;).textContent=this.value+&#39;L&#39;; updateRange(this); markCard(&#39;card-water&#39;,&#39;ok&#39;)">
+      <input type="range" id="water-liters" min="0.5" max="4" step="0.25" value="1.5" oninput="document.getElementById(&#39;water-val&#39;).textContent=this.value+&#39;L&#39;; updateRange(this); markCard(&#39;card-water&#39;,&#39;ok&#39;)" style="--val: 28.57142857142857%;">
       <div class="range-val" id="water-val">1.5L</div>
     </div>
   </div>
@@ -1415,7 +1415,8 @@ function copyDirectly() {
     showCopyModal(txt);
   }
 }
-  const ta = document.getElementById('copy-txt');
+
+function copyReport() {
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(ta.value).then(() => {
       const btn = document.getElementById('copy-btn');
